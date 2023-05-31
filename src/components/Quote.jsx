@@ -7,7 +7,7 @@ const Quote = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading('Loadinng ...');
+      setLoading('Loading...');
       const headers = { 'X-Api-Key': '2k4g3z75gK7QxyXJKapcsg==aFMrsCxvQrn6eWSD' };
       const res = await fetch('https://api.api-ninjas.com/v1/quotes?category=education', { headers });
       const json = await res.json();
