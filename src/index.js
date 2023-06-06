@@ -1,13 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Calculator from './components/Calculator';
+import Quote from './components/Quote';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/calculator',
+    element: <Calculator />,
+  },
+  {
+    path: '/quote',
+    element: <Quote />,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Navbar className="nav" />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
 

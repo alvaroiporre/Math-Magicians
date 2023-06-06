@@ -9,7 +9,7 @@ const Quote = () => {
     const fetchData = async () => {
       setLoading('Loading...');
       const headers = { 'X-Api-Key': '2k4g3z75gK7QxyXJKapcsg==aFMrsCxvQrn6eWSD' };
-      const res = await fetch('https://api.api-ninjas.com/v1/quotes?category=education', { headers });
+      const res = await fetch('https://api.api-ninjas.com/v1/quotes?category=intelligence', { headers });
       const json = await res.json();
       if (json.error) {
         setError(`Error! ${json.error}`);
@@ -21,7 +21,7 @@ const Quote = () => {
   }, []);
 
   return (
-    <p>{quote || error || loading}</p>
+    <p className="quote">{quote || error || loading}</p>
   );
 };
 

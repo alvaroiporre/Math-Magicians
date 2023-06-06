@@ -1,6 +1,80 @@
 body {
-  background-color: whitesmoke;
+  background-color: #27374d;
+  color: #dde6ed;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.calculator-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.quote {
+  font-size: larger;
+  padding: 10%;
+}
+
+.home {
+  padding: 5%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  padding: 20px;
+}
+
+.navbar-list li a {
+  padding-right: 20px;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #dde6ed;
+  font-weight: bold;
+  border-left: 2px solid #dde6ed;
+}
+
+.navbar-list li a:hover {
+  color: #9db2bf;
+}
+
+h1 {
+  font-size: xx-large;
+  padding: 0 20px;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid #dde6ed;
+}
+
+.button {
+  padding: 20px 30px;
+  border: 1px white solid;
+}
+
+.cero {
+  grid-column: 1/3;
+}
+
+.operator {
+  background-color: #9db2bf;
+}
+
+.screen {
+  grid-column: 1/5;
+  padding: 20px;
+  font-size: larger;
+  color: white;
+  background-color: gray;
+  text-align: right;
+  font-family: 'Times New Roman', Times, serif;
 }
