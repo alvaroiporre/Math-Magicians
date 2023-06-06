@@ -1,6 +1,6 @@
 const getStyleName = (value) => {
   if (value === '0') return 'cero';
-  if (value === '/' || value === '+' || value === '-' || value === 'x' || value === '=') return 'operator';
+  if (value === '÷' || value === '+' || value === '-' || value === 'x' || value === '=') return 'operator';
   return '';
 };
 
